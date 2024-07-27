@@ -37,7 +37,7 @@
 
   programs.neovim = {
 	enable = true;
-	package = neovim-nightly;
+	# package = neovim-nightly;
 	viAlias = true;
 	vimAlias = true;
   };
@@ -45,7 +45,10 @@
   home.packages = with pkgs; [
 	wget
 	fzf
+	ripgrep
+	fd
 
+	neofetch
 	tree
   	htop
 	tmux
@@ -55,15 +58,20 @@
 	alacritty
 
   	firefox
+	chromium
 	telegram-desktop
 	gimp
   ];
 
-  home.file = {
+  home.file = {	
+  	".config/nvim" = {
+		source = ./../../../configs/nvim;
+		recursive = true;
+	};
   };
 
   home.sessionVariables = {
-  	EDITOR = "nivm";
+  	EDITOR = "nvim";
 	BROWSER = "firefox";
 	TERMINAL = "alacritty";
   };
