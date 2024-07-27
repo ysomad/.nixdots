@@ -47,6 +47,7 @@
 	fzf
 	ripgrep
 	fd
+	jq
 
 	neofetch
 	tree
@@ -64,8 +65,8 @@
   ];
 
   home.file = {	
-  	".config/nvim" = {
-		source = ./../../../configs/nvim;
+	"~/.config/nvim" = {
+		source = ./configs/nvim;
 		recursive = true;
 	};
   };
