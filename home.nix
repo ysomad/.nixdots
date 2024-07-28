@@ -64,10 +64,9 @@
 	gimp
   ];
 
-  home.file = {	
+   home.file = {	
 	".config/nvim" = {
-		source = ./configs/nvim;
-		recursive = true;
+		source = ./config/nvim;
 	};
   };
 
